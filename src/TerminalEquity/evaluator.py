@@ -10,7 +10,7 @@ from Game.card_tools import card_tools
 
 class Evaluator():
 	def __init__(self):
-		self._texas_lookup = np.load('src/TerminalEquity/matrices/texas_lookup.npy')
+		self._texas_lookup = np.load('/Users/thibaultgillard/Documents/Projet_perso/PokerAI_2024/Deepstack_1/Py_Deepstack/src/TerminalEquity/matrices/texas_lookup.npy') # Relativ path better
 		self._idx_to_cards = self._create_index_to_cards_matrix()
 
 
