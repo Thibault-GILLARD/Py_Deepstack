@@ -62,6 +62,7 @@ class LookaheadBuilder():
 						self.lookahead.action_to_index[action] = self.lookahead.layers[d].indices[0] + action_idx
 
 		street, board = self.lookahead.tree.street, self.lookahead.terminal_equity.board
+		print(get_next_round_value(street))
 		self.lookahead.cfvs_approximator = get_next_round_value(street) # (loads preloaded models)
 		# init input/output variables in NextRoundValue
 		self.lookahead.cfvs_approximator.init_computation(board, self.lookahead.next_round_pot_sizes, self.lookahead.batch_size)

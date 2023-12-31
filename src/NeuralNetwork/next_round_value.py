@@ -172,22 +172,17 @@ class NextRoundValue():
 		return self.cumulative_cfvs
 
 
-
-
-
 NEXT_ROUND_VALUES = {}
 for street in range(1,4):
 	street_name = card_to_string.street_to_name(street)
 	try:
+		print("Loading {} neural network...".format(street_name))
+		print(street)
 		NEXT_ROUND_VALUES[street] = NextRoundValue( street, skip_iterations=arguments.cfr_skip_iters,
 													leaf_nodes_iterations=arguments.leaf_nodes_iterations[street_name] )
+		print("Next round value {}".format(NEXT_ROUND_VALUES[street]))
 	except:
-		print("Didin't found {} neural network... In case if this street's nn is not needed, program will not stop.")
+		print("Didin't found {} neural network... In case if this street's nn is not needed, program will not stop.".format(street_name))
 
 def get_next_round_value(street):
 	return NEXT_ROUND_VALUES[street]
-
-
-
-
-#

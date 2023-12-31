@@ -13,7 +13,7 @@ from Game.card_combinations import card_combinations
 class TerminalEquity():
 	def __init__(self):
 		# load preflop matrix
-		self._pf_equity = np.load('src/TerminalEquity/matrices/pf_equity.npy')
+		self._pf_equity = np.load('/Users/thibaultgillard/Documents/Projet_perso/PokerAI_2024/Deepstack_1/Py_Deepstack/src/TerminalEquity/matrices/pf_equity.npy')
 		# load card blocking matrix from disk if exists
 		if os.path.exists('src/TerminalEquity/matrices/block_matrix.npy'):
 			self._block_matrix = np.load('src/TerminalEquity/matrices/block_matrix.npy')
